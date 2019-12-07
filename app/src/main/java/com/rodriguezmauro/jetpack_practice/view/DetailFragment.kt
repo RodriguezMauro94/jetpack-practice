@@ -1,14 +1,11 @@
 package com.rodriguezmauro.jetpack_practice.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
-
+import androidx.fragment.app.Fragment
 import com.rodriguezmauro.jetpack_practice.R
-import kotlinx.android.synthetic.main.fragment_detail.*
 
 class DetailFragment : Fragment() {
     private var jetPackUuid = 0
@@ -26,12 +23,6 @@ class DetailFragment : Fragment() {
 
         arguments?.let {
             jetPackUuid = DetailFragmentArgs.fromBundle(it).jetPackUuid
-            textView2.text = jetPackUuid.toString()
-        }
-
-        buttonList.setOnClickListener {
-            val action = DetailFragmentDirections.actionListFragment()
-            Navigation.findNavController(it).navigate(action)
         }
     }
 }
