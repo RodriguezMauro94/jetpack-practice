@@ -1,7 +1,8 @@
-package com.rodriguezmauro.jetpack_practice
+package com.rodriguezmauro.jetpack_practice.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.rodriguezmauro.jetpack_practice.R
 
 class MainActivity : AppCompatActivity() {
 
