@@ -11,6 +11,7 @@ import com.rodriguezmauro.jetpack_practice.R
 import kotlinx.android.synthetic.main.fragment_list.*
 
 class ListFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,6 +24,7 @@ class ListFragment : Fragment() {
 
         buttonDetails.setOnClickListener {
             val action = ListFragmentDirections.actionDetailFragment()
+            action.jetPackUuid = 5
             Navigation.findNavController(it).navigate(action)
         }
     }

@@ -11,6 +11,8 @@ import com.rodriguezmauro.jetpack_practice.R
 import kotlinx.android.synthetic.main.fragment_detail.*
 
 class DetailFragment : Fragment() {
+    private var jetPackUuid = 0
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,6 +23,11 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        arguments?.let {
+            jetPackUuid = DetailFragmentArgs.fromBundle(it).jetPackUuid
+            textView2.text = jetPackUuid.toString()
+        }
 
         buttonList.setOnClickListener {
             val action = DetailFragmentDirections.actionListFragment()
