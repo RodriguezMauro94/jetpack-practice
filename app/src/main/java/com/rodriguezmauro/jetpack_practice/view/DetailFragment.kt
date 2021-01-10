@@ -22,7 +22,7 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         arguments?.let {
-            jetPackUuid = DetailFragmentArgs.fromBundle(it).jetPackUuid
+            //jetPackUuid = DetailFragmentArgs.fromBundle(it).jetPackUuid
         }
     }
 }
