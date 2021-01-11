@@ -2,9 +2,9 @@
 
 # Contents
 - Navigation
+- MVVM
 
 WIP:
-- MVVM
 - Live Data
 - Rx Java
 - KTX
