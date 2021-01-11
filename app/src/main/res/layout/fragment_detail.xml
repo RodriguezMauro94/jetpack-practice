@@ -16,40 +16,40 @@
         android:src="@mipmap/ic_launcher"/>
 
     <TextView
-        android:id="@+id/jetPackName"
+        android:id="@+id/dogBreedName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/jetPackImage"
-        android:text="JetPackName"
+        android:text="DogBreedName"
         style="@style/Title"
         android:layout_centerHorizontal="true"
         android:layout_margin="4dp"/>
 
     <TextView
-        android:id="@+id/jetPackPurpose"
+        android:id="@+id/dogPurpose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/jetPackName"
+        android:layout_below="@+id/dogBreedName"
         android:text="Purpose"
         style="@style/Text"
         android:layout_centerHorizontal="true"
         android:layout_margin="4dp"/>
 
     <TextView
-        android:id="@+id/jetPackTemperament"
+        android:id="@+id/dogTemperament"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/jetPackPurpose"
+        android:layout_below="@+id/dogBreedName"
         android:text="Temperament"
         style="@style/Text"
         android:layout_centerHorizontal="true"
         android:layout_margin="4dp"/>
 
     <TextView
-        android:id="@+id/jetPackLifespan"
+        android:id="@+id/dogLifespan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/jetPackTemperament"
+        android:layout_below="@+id/dogTemperament"
         android:text="Lifespan"
         style="@style/Text"
         android:layout_centerHorizontal="true"

@@ -3,6 +3,7 @@ package com.rodriguezmauro.jetpack_practice.view
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.rodriguezmauro.jetpack_practice.R
 import com.rodriguezmauro.jetpack_practice.model.DogBreed
@@ -19,6 +20,9 @@ class DogsListAdapter(val dogsList: ArrayList<DogBreed>): RecyclerView.Adapter<D
         val dog = dogsList[position]
         holder.view.breed.text = dog.dogBreed
         holder.view.lifespan.text = dog.lifeSpan
+        holder.view.setOnClickListener {
+            Navigation.findNavController(it).navigate(ListFragmentDirections.actionDetailFragment())
+        }
     }
 
     override fun getItemCount() = dogsList.size
