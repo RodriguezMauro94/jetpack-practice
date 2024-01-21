@@ -114,7 +114,7 @@ class MainActivity : ComponentActivity() {
                     }
                     */
 
-                    MyDropDownMenu()
+                    BasicSlider()
                 }
             }
         }
@@ -125,7 +125,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     JetpackComponentsCatalogTheme {
-        MyDropDownMenu()
+        BasicSlider()
     }
 }
 
