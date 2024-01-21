@@ -16,9 +16,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.rounded.Star
+import androidx.compose.material3.Badge
+import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -92,7 +97,9 @@ class MainActivity : ComponentActivity() {
                         MyCheckboxWithText()
                     }*/
 
-                    var selected by remember {
+                    //RadioButtons listado
+                   /*
+                   var selected by remember {
                         mutableStateOf("Mau")
                     }
 
@@ -101,7 +108,9 @@ class MainActivity : ComponentActivity() {
                             selected = it
                         }
                     }
+                    */
 
+                    MyBadgeBox()
                 }
             }
         }
@@ -112,7 +121,44 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     JetpackComponentsCatalogTheme {
-        MyRadioButton()
+        MyBadgeBox()
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MyBadgeBox() {
+    BadgedBox(
+        modifier = Modifier.padding(16.dp),
+        badge = {
+            Badge(
+                content = { Text("100") },
+                containerColor = Color.Blue,
+                contentColor = Color.Green
+            )
+        }) {
+        Icon(imageVector = Icons.Default.Star, contentDescription = "Estrella")
+    }
+}
+
+@Composable
+fun MyCard() {
+    Card(modifier = Modifier
+        .fillMaxWidth()
+        .padding(16.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 12.dp),
+        shape = MaterialTheme.shapes.small,
+        colors = CardDefaults.cardColors(
+            containerColor = Color.Red,
+            contentColor = Color.Green,
+        ),
+        border = BorderStroke(2.dp, Color.Black)
+    ) {
+        Column(Modifier.padding(16.dp)) {
+            Text(text = "Ejemplo 1")
+            Text(text = "Ejemplo 2")
+            Text(text = "Ejemplo 3")
+        }
     }
 }
 
