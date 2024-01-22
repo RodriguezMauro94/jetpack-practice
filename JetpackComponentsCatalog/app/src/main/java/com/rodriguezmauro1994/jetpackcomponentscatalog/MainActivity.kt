@@ -1,6 +1,7 @@
 package com.rodriguezmauro1994.jetpackcomponentscatalog
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
@@ -127,6 +128,7 @@ class MainActivity : ComponentActivity() {
                             showDialog = false
                         },
                         onConfirm = {
+                            Toast.makeText(this, "Confirmado", Toast.LENGTH_LONG).show()
                             showDialog = false
                         }
                     )
