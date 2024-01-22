@@ -114,7 +114,7 @@ class MainActivity : ComponentActivity() {
                     }
                     */
 
-                    BasicSlider()
+                    AdvancedSlider()
                 }
             }
         }
@@ -125,7 +125,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     JetpackComponentsCatalogTheme {
-        BasicSlider()
+        AdvancedSlider()
     }
 }
 

@@ -17,3 +17,24 @@ fun BasicSlider() {
         Text(text = sliderPosition.toString())
     }
 }
+
+@Composable
+fun AdvancedSlider() {
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        var sliderPosition by remember {
+            mutableFloatStateOf(0f)
+        }
+        var completeValue by remember {
+            mutableStateOf("")
+        }
+        Slider(
+            value = sliderPosition,
+            onValueChange = { sliderPosition = it },
+            onValueChangeFinished = { completeValue = sliderPosition.toString() },
+            valueRange = 0f..10f,
+            steps = 9,
+            enabled = true
+        )
+        Text(text = completeValue)
+    }
+}
