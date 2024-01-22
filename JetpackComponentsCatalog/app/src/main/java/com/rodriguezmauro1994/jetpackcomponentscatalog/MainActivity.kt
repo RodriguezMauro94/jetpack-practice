@@ -113,8 +113,8 @@ class MainActivity : ComponentActivity() {
                     }
                     */
 
-                    //Dialogs con states
-                    var showDialog by remember {
+                    //AlertDialog
+                   /* var showDialog by remember {
                         mutableStateOf(true)
                     }
 
@@ -129,6 +129,22 @@ class MainActivity : ComponentActivity() {
                         },
                         onConfirm = {
                             Toast.makeText(this, "Confirmado", Toast.LENGTH_LONG).show()
+                            showDialog = false
+                        }
+                    )*/
+
+                    //AlertDialog
+                    var showDialog by remember {
+                        mutableStateOf(true)
+                    }
+
+                    Button(onClick = { showDialog = true }) {
+                        Text(text = "Mostrar dialog")
+                    }
+
+                    MySimpleCustomDialog(
+                        showDialog = showDialog,
+                        onDismiss = {
                             showDialog = false
                         }
                     )
