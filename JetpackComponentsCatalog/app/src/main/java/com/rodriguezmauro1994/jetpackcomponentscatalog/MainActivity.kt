@@ -142,7 +142,7 @@ class MainActivity : ComponentActivity() {
                         Text(text = "Mostrar dialog")
                     }
 
-                    MySimpleCustomDialog(
+                    MyCustomDialog(
                         showDialog = showDialog,
                         onDismiss = {
                             showDialog = false
